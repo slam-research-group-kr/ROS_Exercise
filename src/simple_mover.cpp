@@ -9,10 +9,10 @@ int main(int argc, char** argv)
     // Create a handle to the arm_mover node
     ros::NodeHandle n;
 
-    // Create a publisher that can publish a std_msgs::Float64 message on the /simple_arm/joint_1_position_controller/command topic
-    ros::Publisher joint1_pub = n.advertise<std_msgs::Float64>("/simple_arm/joint_1_position_controller/command", 10);
-    // Create a publisher that can publish a std_msgs::Float64 message on the /simple_arm/joint_2_position_controller/command topic
-    ros::Publisher joint2_pub = n.advertise<std_msgs::Float64>("/simple_arm/joint_2_position_controller/command", 10);
+    // Todo: Create a publisher that can publish a std_msgs::Float64 message on the /simple_arm/joint_1_position_controller/command topic
+    
+    // Todo: Create a publisher that can publish a std_msgs::Float64 message on the /simple_arm/joint_2_position_controller/command topic
+    
 
     // Set loop frequency of 10Hz
     ros::Rate loop_rate(10);
@@ -33,9 +33,9 @@ int main(int argc, char** argv)
         joint1_angle.data = sin(2 * M_PI * 0.1 * elapsed) * (M_PI / 2);
         joint2_angle.data = sin(2 * M_PI * 0.1 * elapsed) * (M_PI / 2);
 
-        // Publish the arm joint angles
-        joint1_pub.publish(joint1_angle);
-        joint2_pub.publish(joint2_angle);
+        // Todo: Publish the arm joint angles
+        
+
 
         // Sleep for the time remaining until 10Hz is reached
         loop_rate.sleep();
